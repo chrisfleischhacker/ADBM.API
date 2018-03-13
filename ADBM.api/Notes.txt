@@ -1,0 +1,78 @@
+﻿https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design
+
+
+Non Entity Framework Models MVC CRUD
+https://www.completecsharptutorial.com/asp-net-mvc5/insert-update-delete-using-models-without-ef-in-asp-net-mvc5/
+https://www.completecsharptutorial.com/mvc-articles/insert-update-delete-in-asp-net-mvc-5-without-entity-framework/
+
+API
+https://docs.microsoft.com/en-us/aspnet/web-api/
+https://docs.microsoft.com/en-us/aspnet/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
+https://docs.microsoft.com/en-us/aspnet/web-api/overview/getting-started-with-aspnet-web-api/action-results
+http://www.technicalblogs.sentientmindz.com/2017/03/30/creating-a-web-api-using-vs-2017-community-edition-and-asp-net-core-web-application/
+https://www.codeguru.com/csharp/.net/net_asp/creating-a-web-api-in-asp.net-core.html
+http://www.c-sharpcorner.com/article/http-put-post-and-delete-in-asp-net-web-api/
+
+
+API Returns JSON or XML
+https://onlinehelp.tableau.com/current/api/rest_api/en-us/REST/rest_api_concepts_example_requests.htm
+
+API Docs
+
+
+Angular
+http://www.talkingdotnet.com/how-to-create-an-angular-4-app-with-visual-studio-2017/
+https://www.codeproject.com/Articles/1181888/Angular-in-ASP-NET-MVC-Web-API-Part
+
+
+
+
+IISExpress runs as the logged on user's account
+
+http://localhost:51055/Customer
+
+http://localhost:51055/Customer/Details/1389
+
+http://localhost:51055/Customer/Edit/1
+
+http://localhost:51055/API/Values
+
+http://localhost:51055/API/Values/1
+
+header: Accept, value: application/xml or application/json
+
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+
+In Browser Console:
+fetch('http://localhost:51055/API/Values/1314')
+  .then(res => res.json())
+  .then(console.log)
+
+  fetch('http://localhost:51055/API/Values/1314')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(myJson);
+  });
+
+
+Using Fiddler
+GET http://localhost:51055/api/Values
+GET http://localhost:51055/api/Values/1
+
+Host: localhost:51055
+Content-Type: application/json
+Content-Length: 136
+POST 
+http://localhost:51055/api/Values 
+{"Customer":"1","FirmName":"surrealbox.net","LastName":"fox","FirstName":"chris","City":"COS","State":"CO","BusinessPhone":"7199640222"}
+
+Host: localhost:51055
+Content-Type: application/json
+Content-Length: 136
+PUT 
+http://localhost:51055/api/Values/1 
+{"Customer":"1","FirmName":"SBN","LastName":"Flesichhacker","FirstName":"Christian","City":"COS","State":"TX","BusinessPhone":"7199640222"}
+
+DELETE http://localhost:51055/api/Values/1
